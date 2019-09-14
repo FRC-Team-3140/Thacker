@@ -157,7 +157,7 @@ public class Robot extends ImprovedRobot {
 	public void autonomousInit() {		
 		autoLooper.start();
 		
-		String gmsg = DriverStation.getInstance().getGameSpecificMessage();
+		/*String gmsg = DriverStation.getInstance().getGameSpecificMessage();
 		while (gmsg == null || gmsg.length() != 3) {
 			gmsg = DriverStation.getInstance().getGameSpecificMessage();
 			try {
@@ -346,8 +346,7 @@ public class Robot extends ImprovedRobot {
 	
 	@Override
 	public void autonomousPeriodic() {
-		Scheduler.getInstance().run();
-		allPeriodic();
+		teleopPeriodic();
 	}
 
 	@Override
@@ -356,7 +355,7 @@ public class Robot extends ImprovedRobot {
 //		if(autoCommand != null && autoCommand.isRunning())
 //			autoCommand.cancel();
 	}	
-
+			
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();

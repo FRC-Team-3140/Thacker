@@ -1,7 +1,7 @@
 package main.subsystems;
 
 import edu.wpi.cscore.UsbCamera;
-import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.cameraserver.CameraServer;
 import interfacesAndAbstracts.ImprovedClass;
 
 public class DriverCamera extends ImprovedClass {
